@@ -189,14 +189,13 @@ Exercise 12: FizzBuzz with arrays
 Complete Exercise 12 in the space below:
 */
 
-const numbersAry = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
-const fizz = numbersAry.filter((num) => {
+const fizz = nums.filter((num) => {
   return num % 3 === 0;
 });
-const buzz =  numbersAry.filter((num) => {
+const buzz =  nums.filter((num) => {
   return num % 5 === 0;
 });
-const fizzbuzz =  numbersAry.filter((num) => {
+const fizzbuzz =  nums.filter((num) => {
   return num % 3 === 0 && num % 5 === 0;
 });
 
@@ -218,6 +217,8 @@ Exercise 13: Retrieve the Last Array
 Complete Exercise 13 in the space below:
 */
 
+
+
 const numArrays = [
 	[100, 5, 23],
 	[15, 21, 72, 9],
@@ -225,7 +226,7 @@ const numArrays = [
 	[7, 81, 90]
 ];
 
-const numList = numArrays.pop();
+const numList = numArrays[numArrays.length -1];
 
 console.log('Exercise 13 result:', numList);
 
@@ -240,6 +241,51 @@ Exercise 14: Accessing within nested arrays
 Complete Exercise 14 in the space below:
 */
 
-const num = numArrays.pop(-1).slice(1);
+let num;
+  const numbersAry = numArrays.flat();
+  for (let i = 0; i < numbersAry.length; i++){
+    if (numbersAry[i] === 66) {
+      num = numbersAry[i];
+    }
+  }
+
 
 console.log('Exercise 14 result:', num);
+
+
+/*
+Exercise 15: Nested array sum
+
+1) Use nested loops or `forEach()` methods to sum up all numbers within 
+   `numArrays` nested arrays.
+   
+2) Assign the sum to a variable called `total`.
+
+Hint: Be sure to declare and initialize the total variable before the iterations.
+
+Complete Exercise 15 in the space below:
+*/
+// const sum = for (let num of numArrays){
+//   console.log(num);
+// }
+
+// const numArrays = [
+// 	[100, 5, 23],
+// 	[15, 21, 72, 9],
+// 	[45, 66],
+// 	[7, 81, 90]
+// ];
+
+let total = 0;
+
+for (let i = 0; i < numbersAry.length; i++){
+  console.log(numbersAry[i])
+  total = total += numbersAry[i];
+}
+
+
+console.log('Exercise 15 result:\n', total);
+
+
+
+
