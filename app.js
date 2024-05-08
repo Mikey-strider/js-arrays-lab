@@ -280,7 +280,7 @@ let total = 0;
 
 for (let i = 0; i < numbersAry.length; i++){
   console.log(numbersAry[i])
-  total = total += numbersAry[i];
+  total += numbersAry[i];
 }
 
 
